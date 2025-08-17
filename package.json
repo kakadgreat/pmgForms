@@ -1,0 +1,42 @@
+{
+  "name": "pmg-intake-poc",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^11.0.0",
+    "jspdf": "^2.5.1",
+    "jszip": "^3.10.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "signature_pad": "^4.1.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.5.4",
+    "vite": "^5.2.0"
+  }
+}
+
+# in the project root
+git init
+git branch -M main
+
+# add a .gitignore so you don't commit build artifacts
+printf "node_modules/\ndist/\n.DS_Store\n.env\n" > .gitignore
+
+git add .
+git commit -m "feat: initial import of PMG Intake POC (Vite + React + TS)"
+
+# adds an engines field to package.json (edit manually if you prefer)
+"engines": { "node": ">=18" }
