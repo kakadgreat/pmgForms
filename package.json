@@ -25,18 +25,8 @@
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.4",
     "vite": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
-
-# in the project root
-git init
-git branch -M main
-
-# add a .gitignore so you don't commit build artifacts
-printf "node_modules/\ndist/\n.DS_Store\n.env\n" > .gitignore
-
-git add .
-git commit -m "feat: initial import of PMG Intake POC (Vite + React + TS)"
-
-# adds an engines field to package.json (edit manually if you prefer)
-"engines": { "node": ">=18" }
